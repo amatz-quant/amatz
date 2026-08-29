@@ -1,0 +1,169 @@
+:root {
+  --sidebar-w: 240px;
+  --accent: #5b63e6;
+  --bg1: #C4C8F2;
+  --bg2: #dfe1f9;
+  --bg3: #ffffff;
+  --card-bg: rgba(255,255,255,0.92);
+  --sidebar-bg: rgba(255,255,255,0.95);
+  --text: #0b1220;
+  --muted: #6b7280;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  font-family: Segoe, UI, Arial, sans-serif;
+  background: rgba(0, 0, 0, 0) linear-gradient(135deg, #c4c8f2 0%, #dfe1f9 40%, white 100%) repeat scroll 0% 0%;
+  color: var(--text);
+}
+
+.layout {
+  min-height: 100vh;
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: var(--sidebar-w);
+  padding: 28px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid rgba(11, 18, 34, 0.04);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.nav {
+  margin-top: 6px;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.nav a svg {
+  flex: 0 0 18px;
+  opacity: 0.95;
+}
+
+.nav a:hover {
+  background: rgba(91, 99, 230, 0.09) none repeat scroll 0% 0%;
+  color: var(--accent);
+}
+
+.nav a.active {
+  background: rgba(91, 99, 230, 0.14) none repeat scroll 0% 0%;
+  color: var(--accent);
+}
+
+.main {
+  margin-left: var(--sidebar-w);
+  padding: 40px;
+}
+
+.card {
+  max-width: 1200px;
+  margin: 0px auto;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--radius);
+box-shadow: 0px 14px 40px rgba(8, 15, 40, 0.06);
+  border: 1px solid rgba(11, 18, 34, 0.04);
+}
+
+#site-title {
+  font-size: 28px;
+  margin: 0px 0px 14px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.columns-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.columns-table col {
+  width: 33.3333%;
+}
+
+.columns-table td {
+  vertical-align: top;
+  padding: 12px;
+  border: 0px none;
+}
+
+.card .content {
+  font-family: Segoe, UI, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.card .content p {
+  margin: 10px 0px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 14px auto;
+  border-radius: 10px;
+box-shadow: 0px 10px 30px rgba(10, 20, 40, 0.06);
+}
+
+@media ( max-width : 900px ) {
+  .main {
+    padding: 20px;
+    margin-left: 0px;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: 0px none;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .nav a span {
+    display: none;
+  }
+  .columns-table, .columns-table tr, .columns-table td, .columns-table col {
+    display: block;
+    width: 100%;
+  }
+  .columns-table td {
+    padding: 10px 0px;
+  }
+}
+
+big:hover {
+  font-size: smaller;
+}
+
+#site-title:hover {
+  text-align: center;
+}
+
